@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SyncU</string>
+    <string name="privacy_promise">Privacy-first sync for intervals.icu</string>
+    <string name="no_tracking">Zero tracking • Zero ads • Fully encrypted</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="hc_permissions_granted">✓ Health Connect Permissions Granted</string>
+    <string name="hc_permissions_grant">Grant Health Connect Permissions</string>
+</resources>

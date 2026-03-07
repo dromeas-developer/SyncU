@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!-- Activity Metrics Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/headerActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🏃 Activity" android:textSize="18sp" android:textStyle="bold" />
+                        <ImageView android:id="@+id/iconActivity" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float" android:contentDescription="Expand" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/contentActivity" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowSteps" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Steps" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvSteps" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvStepsIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowCalories" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Calories (kcal)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvCalories" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvCaloriesIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Vitals Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardVitals"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp" app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/headerVitals"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true" android:focusable="true">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🩺 Vitals" android:textSize="18sp" android:textStyle="bold" />
+                        <ImageView android:id="@+id/iconVitals" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float" android:contentDescription="Expand" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/contentVitals" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowSystolic" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Systolic" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvSystolic" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvSystolicIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowDiastolic" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Diastolic" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvDiastolic" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvDiastolicIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowSpO2" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="SpO2 (%)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvSpO2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvSpO2Intervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowBloodGlucose" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Glucose" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvBloodGlucose" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvBloodGlucoseIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowVO2Max" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="VO2 Max" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvVO2Max" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvVO2MaxIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowRespiratoryRate" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Resp Rate" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvRespiratoryRate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvRespiratoryRateIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Heart Metrics Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardHeart"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp" app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/headerHeart"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true" android:focusable="true">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="❤️ Heart" android:textSize="18sp" android:textStyle="bold" />
+                        <ImageView android:id="@+id/iconHeart" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float" android:contentDescription="Expand" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/contentHeart" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowRestingHR" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Rest HR" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvRestingHR" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvRestingHRIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowSleepHR" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Sleep HR" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvSleepHR" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvSleepHRIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowHRV" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="HRV (ms)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvHRV" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvHRVIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Body Metrics Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBody"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp" app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/headerBody"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true" android:focusable="true">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="⚖️ Body" android:textSize="18sp" android:textStyle="bold" />
+                        <ImageView android:id="@+id/iconBody" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float" android:contentDescription="Expand" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/contentBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowWeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Weight (kg)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvWeight" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvWeightIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowBodyFat" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Fat (%)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvBodyFat" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvBodyFatIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowLeanBodyMass" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Lean (kg)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvLeanBodyMass" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvLeanBodyMassIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:id="@+id/rowBoneMass" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Bone (kg)" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvBoneMass" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvBoneMassIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Sleep Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSleep"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp" app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/headerSleep"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:padding="16dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true" android:focusable="true">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="😴 Sleep" android:textSize="18sp" android:textStyle="bold" />
+                        <ImageView android:id="@+id/iconSleep" android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/arrow_down_float" android:contentDescription="Expand" />
+                    </LinearLayout>
+
+                    <LinearLayout android:id="@+id/contentSleep" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
+
+                        <!-- Summary Header (Duration comparison) -->
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Time in Bed" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvSleepDuration" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvSleepDurationIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
+                            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:text="Asleep" android:textStyle="bold" />
+                            <TextView android:id="@+id/tvSleepAsleep" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                            <TextView android:id="@+id/tvSleepAsleepIntervals" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="--" />
+                        </LinearLayout>
+
+                        <!-- Discrete Divider -->
+                        <View
+                            android:layout_width="match_parent" android:layout_height="1dp"
+                            android:layout_marginTop="4dp" android:layout_marginBottom="12dp"
+                            android:background="#1A8E8E93" />
+
+                        <!-- Sleep Timeline Chart -->
+                        <com.syncu.ui.SleepChartView
+                            android:id="@+id/sleepChartView"
+                            android:layout_width="match_parent" android:layout_height="180dp"
+                            android:layout_marginBottom="16dp" />
+
+                        <!-- Detailed breakdown items -->
+                        <LinearLayout
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:orientation="vertical" android:paddingTop="8dp">
+
+                            <!-- Awake Row -->
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp">
+                                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#FFFFFF" android:layout_marginEnd="12dp" />
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Awake" android:textColor="#8E8E93" />
+                                <TextView android:id="@+id/tvSleepAwakeDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--h --m" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                                <TextView android:id="@+id/tvSleepAwakePercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--%" android:textColor="#8E8E93" />
+                            </LinearLayout>
+
+                            <!-- REM Row -->
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp">
+                                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#4FC3F7" android:layout_marginEnd="12dp" />
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="REM" android:textColor="#8E8E93" />
+                                <TextView android:id="@+id/tvSleepREMDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--h --m" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                                <TextView android:id="@+id/tvSleepREMPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--%" android:textColor="#8E8E93" />
+                            </LinearLayout>
+
+                            <!-- Light Row -->
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp">
+                                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#1E88E5" android:layout_marginEnd="12dp" />
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Light" android:textColor="#8E8E93" />
+                                <TextView android:id="@+id/tvSleepLightDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--h --m" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                                <TextView android:id="@+id/tvSleepLightPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--%" android:textColor="#8E8E93" />
+                            </LinearLayout>
+
+                            <!-- Deep Row -->
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="4dp">
+                                <View android:layout_width="12dp" android:layout_height="12dp" android:background="#154391" android:layout_marginEnd="12dp" />
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Deep" android:textColor="#8E8E93" />
+                                <TextView android:id="@+id/tvSleepDeepDetail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--h --m" android:textStyle="bold" android:layout_marginEnd="8dp"/>
+                                <TextView android:id="@+id/tvSleepDeepPercent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--%" android:textColor="#8E8E93" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
