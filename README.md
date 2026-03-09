@@ -99,14 +99,14 @@ Health Connect → SyncU (on your device) → Intervals.icu
 
 - Android Studio Hedgehog or later
 - JDK 17 or later
-- Android SDK 34
+- Android SDK 36
 - Gradle 8.11
 
 ### Build Steps
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/syncu.git
+git clone https://github.com/dromeas-developer/syncu.git
 cd syncu
 
 # Open in Android Studio
