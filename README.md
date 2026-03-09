@@ -1,251 +1,226 @@
-# SyncU - COMPLETE Package ✅
+# SyncU
 
-**100% Ready to Build! All Files Included!**
+**Seamlessly sync your Health Connect data to Intervals.icu**
 
----
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Android-green.svg)](https://www.android.com/)
+[![Health Connect](https://img.shields.io/badge/Health%20Connect-Supported-teal.svg)](https://health.google/health-connect/)
 
-## 🎉 What's New
-
-### Swipeable Day View Design
-- **Open app → See TODAY immediately**
-- **Swipe left** for previous days
-- **Swipe right** for upcoming days
-- **Tap "Today" button** to jump back
-
-### First-Time Setup
-- Configure intervals.icu credentials
-- Grant Health Connect permissions
-- Enable auto-sync (optional)
-- **Then swipe through your days!**
+SyncU is a lightweight Android app that automatically syncs your health and fitness data from Health Connect to Intervals.icu. No manual exports, no complicated setup - just seamless data syncing.
 
 ---
 
-## ✅ COMPLETE - Everything Included!
+## ✨ Features
 
-**16 Kotlin Files:**
-✓ SyncUApp.kt - Application class
-✓ Models.kt - Activity data classes
-✓ AppDatabase.kt - Room database with encryption
-✓ HealthConnectManager.kt - Read from Health Connect
-✓ IntervalsApiClient.kt - Upload to intervals.icu
-✓ ExtendedHealthConnectManager.kt - Wellness data
-✓ IntervalsWellnessApiClient.kt - Wellness upload
-✓ MainActivity.kt - Swipeable day view
-✓ DayFragment.kt - Day data display
-✓ SetupActivity.kt - First-time configuration
-✓ DayDetailsActivity.kt - Detailed views
-✓ ActivityEditDialog.kt - Edit & re-upload
-✓ WellnessDetailedFragment.kt - Wellness display
-✓ DashboardActivity.kt - Calendar (bonus)
-✓ SyncWorker.kt - Background sync
-✓ SecureCredentialsManager.kt - Encrypted storage
-
-**12 Layout Files:**
-✓ activity_setup.xml
-✓ activity_main.xml
-✓ fragment_day.xml
-✓ activity_day_details.xml
-✓ dialog_edit_activity.xml
-✓ fragment_activities.xml
-✓ fragment_heart_rate.xml
-✓ fragment_wellness.xml
-✓ fragment_summary.xml
-✓ item_activity.xml
-✓ item_calendar_day.xml
-✓ activity_dashboard.xml
-
-**Build Configuration:**
-✓ build.gradle (FIXED!)
-✓ settings.gradle
-✓ gradle.properties
-✓ app/build.gradle
-✓ AndroidManifest.xml
-✓ ProGuard rules
-
-**Everything is here!** Just extract and build! 🚀
+- **📊 Side-by-Side Comparison** - View your Health Connect data alongside Intervals.icu data
+- **🔄 Automatic Sync** - Set it to sync twice daily and forget about it
+- **⚡ Manual Control** - Refresh data or sync specific days on demand
+- **🔒 Privacy First** - Data syncs directly from your device to Intervals.icu
+- **📱 Simple & Clean** - Minimal interface focused on data accuracy
+- **🆓 Free & Open Source** - No ads, no tracking, no premium features
 
 ---
 
-## 🚀 Quick Start (5 Minutes!)
+## 📸 Screenshots
 
-### Step 1: Extract
-```bash
-tar -xzf SyncU-COMPLETE-FINAL.tar.gz
-cd SyncU
+_Coming soon_
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+- Android device with Health Connect support
+- Intervals.icu account with API access
+- Health Connect compatible apps (Google Fit, Samsung Health, Garmin, Fitbit, etc.)
+
+### Installation
+
+1. Download from [Google Play Store](#) _(coming soon)_
+2. Or build from source (see below)
+
+### Setup
+
+1. **Grant Permissions** - Allow SyncU to read data from Health Connect
+2. **Add Credentials** - Enter your Intervals.icu API ID and key
+3. **Enable Auto-Sync** - Optionally enable twice-daily automatic syncing
+4. **Done!** - View side-by-side data and sync as needed
+
+---
+
+## 🔄 How It Works
+
+SyncU acts as a bridge between Health Connect and Intervals.icu:
+
 ```
-
-### Step 2: Open in Android Studio
-1. **File** → **Open**
-2. Select **SyncU** folder
-3. Wait for Gradle sync (2-5 min)
-
-### Step 3: Build & Run
-Click green ▶ **Run** button
-
-**Done!** App launches on your phone!
-
----
-
-## 📱 First Use
-
-### 1. Setup Screen
-- Enter your intervals.icu API Key
-- Enter your Athlete ID
-- Tap "Save Credentials"
-
-### 2. Grant Permissions
-- Tap "Grant Permissions"
-- Health Connect opens
-- Allow requested permissions
-
-### 3. Enable Auto Sync (Optional)
-- Toggle "Auto Sync" on
-- Syncs every 6 hours automatically
-
-### 4. Continue to App
-- Tap "Continue to App"
-- See TODAY's data immediately!
-
-### 5. Swipe!
-- Swipe left → Yesterday
-- Swipe right → Tomorrow
-- Tap "Today" → Jump back to today
-
----
-
-## 🎯 Features
-
-### Core Functionality
-- ✅ Read activities from Health Connect
-- ✅ Upload to intervals.icu
-- ✅ Background sync every 6 hours
-- ✅ Encrypted credential storage
-- ✅ Swipeable day navigation
+Health Connect → SyncU (on your device) → Intervals.icu
+```
 
 ### Data Synced
-**Activities:**
-- Running, Cycling, Walking, Swimming
-- Heart rate, Duration, Distance
-- Calories, Power, Elevation
 
-**Wellness:**
-- HRV (Heart Rate Variability)
-- Resting Heart Rate
-- Weight & Body Composition
-- Sleep duration and stages
-- Blood Pressure, SpO2
-- Hydration, Nutrition
+- **Activities** - Running, cycling, walking, and other workouts
+- **Heart Metrics** - Resting heart rate, average HR, HRV
+- **Steps & Distance** - Daily step counts and distance covered
+- **Calories** - Active and total energy burned
+- **Sleep** - Total sleep time and sleep stages (awake, light, deep, REM)
+- **Body Metrics** - Weight and body composition
 
-### Edit & Re-upload
-- Tap any activity to edit
-- Modify any field
-- Re-upload to intervals.icu
-- Delete if needed
+### Sync Options
 
----
+**Automatic Sync:**
+- Enable in settings
+- Syncs twice per day automatically
+- Keeps your Intervals.icu data up to date
 
-## 🏗️ Architecture
-
-```
-SetupActivity (First time only)
-    ↓
-MainActivity (ViewPager2)
-    ├─ DayFragment (Yesterday)
-    ├─ DayFragment (TODAY) ← Start here
-    └─ DayFragment (Tomorrow)
-        ├─ Activities RecyclerView
-        ├─ Wellness Metrics
-        └─ Summary Stats
-
-Background:
-SyncWorker (Every 6 hours)
-    ├─ HealthConnectManager → Read data
-    ├─ AppDatabase → Store locally
-    └─ IntervalsApiClient → Upload
-```
+**Manual Sync:**
+- Pull down to refresh Health Connect data
+- Tap sync button to push specific days to Intervals.icu
+- Full control when you need it
 
 ---
 
-## 🔐 Privacy
+## 🔒 Privacy & Security
 
-- ❌ Zero tracking
-- ❌ Zero ads
-- ❌ Zero analytics
-- ✅ AES-256 encrypted storage
-- ✅ HTTPS only
-- ✅ Direct to YOUR intervals.icu
-- ✅ Open source
+**Your data stays yours.**
 
----
+- ✅ No data collection - we don't store or access your health data
+- ✅ Direct sync - data goes straight from your device to Intervals.icu
+- ✅ Local credentials - your API keys are encrypted on your device only
+- ✅ Open source - verify our claims by reading the code
 
-## 📖 Technical Details
-
-**Min SDK:** 26 (Android 8.0)
-**Target SDK:** 34 (Android 14)
-**Language:** Kotlin 100%
-**Architecture:** Clean Architecture
-**Database:** Room with encryption
-**Networking:** OkHttp
-**Background:** WorkManager
+[Read our Privacy Policy](https://yourusername.github.io/syncu/privacy.html)
 
 ---
 
-## 🐛 Troubleshooting
+## 🛠️ Building from Source
 
-### "Gradle sync failed"
-```
-File → Invalidate Caches / Restart
-```
+### Prerequisites
 
-### "SDK not found"
-```
-Tools → SDK Manager
-Install Android SDK 34
-```
+- Android Studio Hedgehog or later
+- JDK 17 or later
+- Android SDK 34
+- Gradle 8.11
 
-### "Health Connect not available"
-Install from Play Store, open it once
-
----
-
-## 🎉 You're Ready!
-
-This package has **EVERYTHING**:
-- ✅ All 16 Kotlin source files
-- ✅ All 12 XML layouts
-- ✅ Complete build configuration
-- ✅ Swipeable day view
-- ✅ Setup wizard
-- ✅ Background sync
-- ✅ Encrypted storage
-
-**Just extract, open in Android Studio, and build!**
-
----
-
-## 💡 Usage Tips
-
-1. **First install:** Go through setup wizard
-2. **Daily use:** Just swipe to see your days
-3. **Edit activities:** Tap activity → Edit → Save
-4. **Manual sync:** Pull down to refresh (when implemented)
-5. **Settings:** Access from profile icon (when added)
-
----
-
-## 🚀 Build Now
+### Build Steps
 
 ```bash
-cd SyncU
+# Clone the repository
+git clone https://github.com/yourusername/syncu.git
+cd syncu
+
+# Open in Android Studio
+# Or build from command line:
 ./gradlew assembleDebug
+
+# Install on device
+./gradlew installDebug
 ```
 
-APK in: `app/build/outputs/apk/debug/app-debug.apk`
+### Configuration
 
-Install and enjoy! 🎉
+No special configuration needed - just build and run!
 
 ---
 
-**SyncU: Your data. Your intervals. Zero tracking.**
+## 📱 App Architecture
 
-Now with the fastest UX - swipe through your days! 🔒
+- **Language:** Kotlin
+- **UI:** Android Jetpack Compose / XML layouts
+- **Database:** Room (SQLite)
+- **Health Connect:** Health Connect API 1.1.0-alpha10
+- **Networking:** Retrofit for Intervals.icu API
+- **Security:** Android Keystore for credential encryption
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+- 🐛 Report bugs via [GitHub Issues](https://github.com/yourusername/syncu/issues)
+- 💡 Suggest features or improvements
+- 🔧 Submit pull requests
+- 📖 Improve documentation
+- ⭐ Star the project if you find it useful!
+
+### Development Guidelines
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 🐛 Known Issues
+
+- None currently! Report issues on [GitHub](https://github.com/yourusername/syncu/issues)
+
+---
+
+## 📋 Roadmap
+
+- [x] Basic Health Connect sync
+- [x] Side-by-side data comparison
+- [x] Auto-sync (twice daily)
+- [x] Manual refresh and sync
+- [ ] Google Play Store release
+- [ ] oAuth intervals.icu authentication
+
+---
+
+## ❓ FAQ
+
+### Does SyncU replace the Intervals.icu app?
+No, SyncU is a companion tool that syncs Health Connect data TO Intervals.icu. You still use Intervals.icu for training analysis.
+
+### Does SyncU work without internet?
+You can view your local Health Connect data offline, but syncing to Intervals.icu requires an internet connection.
+
+### What happens if I have different data in Health Connect vs Intervals.icu?
+SyncU shows both side-by-side. When you sync, Health Connect data is pushed to Intervals.icu (it doesn't merge or modify).
+
+### How often does auto-sync run?
+Twice daily when enabled. You can also manually sync anytime.
+
+### Is my data safe?
+Yes. SyncU doesn't store your health data on any servers. Your Intervals.icu credentials are encrypted using Android Keystore and stored only on your device.
+
+### Which Health Connect apps are compatible?
+Any app that writes to Health Connect: Google Fit, Samsung Health, Fitbit, Garmin Connect, Strava, and many more.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- [Intervals.icu](https://intervals.icu/) - For their excellent fitness analytics platform
+- [Health Connect](https://health.google/health-connect/) - For Android's unified health data platform
+- The open source community
+
+---
+
+## 📧 Support
+
+- **Issues:** [GitHub Issues](https://github.com/yourusername/syncu/issues)
+- **Email:** support@dromeas.dev
+- **Privacy Policy:** [privacy.html](https://yourusername.github.io/syncu/privacy.html)
+- **Terms & Conditions:** [terms.html](https://yourusername.github.io/syncu/terms.html)
+
+---
+
+## 🌟 Star History
+
+If you find SyncU useful, please consider starring the repository! ⭐
+
+---
+**Made with ❤️ for athletes and fitness enthusiasts**
+
+SyncU - Because your fitness data should flow freely. 🏃‍♂️💓📊
