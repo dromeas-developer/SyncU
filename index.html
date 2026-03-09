@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncU - Sync Health Connect to Intervals.icu</title>
+    <meta name="description" content="Automatically sync your Health Connect data to Intervals.icu. Simple, fast, privacy-focused.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1A5F7A 0%, #2a7f9a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary {
+            background: #E91E63;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #1A5F7A;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            padding: 30px;
+            border-radius: 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #E91E63;
+        }
+        
+        .feature h3 {
+            color: #1A5F7A;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .how-it-works {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #E91E63;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .footer {
+            background: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #E91E63;
+            text-decoration: none;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #1A5F7A;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>SyncU</h1>
+    <p>Sync Health Connect to Intervals.icu - Effortlessly</p>
+    <p style="font-size: 1.1em;">Your health data, perfectly synced. Simple side-by-side comparison and automatic syncing.</p>
+    <div>
+        <a href="#" class="btn btn-primary">Download on Google Play</a>
+        <a href="https://github.com/yourusername/syncu" class="btn btn-secondary">View on GitHub</a>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Features</h2>
+    
+    <div class="features">
+        <div class="feature">
+            <h3>📊 Side-by-Side Comparison</h3>
+            <p>View your Health Connect data alongside Intervals.icu data. See what's synced and what's not, all in one place.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>🔄 Automatic Sync</h3>
+            <p>Enable twice-daily automatic syncing. Set it once and your data stays up to date without any effort.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>⚡ Manual Control</h3>
+            <p>Pull to refresh Health Connect data. Tap to sync specific days. Full control when you need it.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>🔒 Privacy First</h3>
+            <p>Your data goes directly from your device to Intervals.icu. We don't store or access anything. Ever.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>📱 Simple & Clean</h3>
+            <p>No complicated settings. No confusing menus. Just your data, clearly displayed and easily synced.</p>
+        </div>
+        
+        <div class="feature">
+            <h3>🆓 Free & Open Source</h3>
+            <p>No ads. No tracking. No premium features. Completely free and open source on GitHub.</p>
+        </div>
+    </div>
+</div>
+
+<div class="how-it-works">
+    <h2>How It Works</h2>
+    
+    <div class="steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Connect</h3>
+            <p>Grant Health Connect permissions and add your Intervals.icu API credentials</p>
+        </div>
+        
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Compare</h3>
+            <p>View your data side-by-side. See what's in Health Connect vs what's in Intervals.icu</p>
+        </div>
+        
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Sync</h3>
+            <p>Enable auto-sync or manually sync specific days. Your data flows directly to Intervals.icu</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>What Gets Synced</h2>
+    
+    <div style="max-width: 600px; margin: 30px auto;">
+        <ul style="list-style: none; font-size: 1.1em; line-height: 2;">
+            <li>✅ Activities (running, cycling, walking, etc.)</li>
+            <li>✅ Heart metrics (resting HR, average, HRV)</li>
+            <li>✅ Steps & distance</li>
+            <li>✅ Calories burned</li>
+            <li>✅ Sleep (duration + stages)</li>
+            <li>✅ Body metrics (weight, body fat)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cta">
+    <h2>Ready to Sync?</h2>
+    <p style="font-size: 1.2em; margin-bottom: 30px; color: #666;">Free, open source, and ready to use</p>
+    <a href="#" class="btn btn-primary">Download Now</a>
+    <a href="https://github.com/yourusername/syncu" class="btn btn-secondary">View Source Code</a>
+    
+    <p style="margin-top: 40px; color: #888;">
+        <strong>Requirements:</strong> Android with Health Connect · Intervals.icu account · Health Connect compatible apps
+    </p>
+</div>
+
+<div class="footer">
+    <p><strong>SyncU</strong> - Because your fitness data should flow freely 🏃‍♂️💓📊</p>
+    <p style="margin-top: 20px;">
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms & Conditions</a> | 
+        <a href="https://github.com/yourusername/syncu">GitHub</a>
+    </p>
+    <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
+        Open source under MIT License
+    </p>
+</div>
+
+</body>
+</html>
