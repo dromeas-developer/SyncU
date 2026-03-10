@@ -54,8 +54,8 @@
                     <LinearLayout android:id="@+id/contentActivity" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_health_connect_icon" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_intervals_icon" android:contentDescription="Intervals" android:scaleType="centerInside" />
                         </LinearLayout>
 
                         <LinearLayout android:id="@+id/rowSteps" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
@@ -97,8 +97,8 @@
                     <LinearLayout android:id="@+id/contentVitals" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_health_connect_icon" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_intervals_icon" android:contentDescription="Intervals" android:scaleType="centerInside" />
                         </LinearLayout>
 
                         <LinearLayout android:id="@+id/rowSystolic" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
@@ -164,8 +164,8 @@
                     <LinearLayout android:id="@+id/contentHeart" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_health_connect_icon" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_intervals_icon" android:contentDescription="Intervals" android:scaleType="centerInside" />
                         </LinearLayout>
 
                         <LinearLayout android:id="@+id/rowRestingHR" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
@@ -213,8 +213,8 @@
                     <LinearLayout android:id="@+id/contentBody" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:visibility="gone">
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_health_connect_icon" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_intervals_icon" android:contentDescription="Intervals" android:scaleType="centerInside" />
                         </LinearLayout>
 
                         <LinearLayout android:id="@+id/rowWeight" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">
@@ -270,8 +270,8 @@
                         <!-- Summary Header (Duration comparison) -->
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingBottom="8dp" android:gravity="center_vertical">
                             <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_health_connect" android:contentDescription="HC" android:scaleType="centerInside" />
-                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@drawable/ic_intervals" android:contentDescription="Intervals" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_health_connect_icon" android:contentDescription="HC" android:scaleType="centerInside" />
+                            <ImageView android:layout_width="0dp" android:layout_height="24dp" android:layout_weight="1" android:src="@mipmap/ic_intervals_icon" android:contentDescription="Intervals" android:scaleType="centerInside" />
                         </LinearLayout>
 
                         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingVertical="8dp" android:gravity="center_vertical">

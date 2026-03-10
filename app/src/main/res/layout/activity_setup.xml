@@ -67,7 +67,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_intervals"
+                            android:src="@mipmap/ic_intervals_icon"
                             android:layout_marginEnd="12dp"
                             android:contentDescription="Intervals.icu icon" />
 
@@ -191,7 +191,7 @@
                         <ImageView
                             android:layout_width="24dp"
                             android:layout_height="24dp"
-                            android:src="@drawable/ic_health_connect"
+                            android:src="@mipmap/ic_health_connect_icon"
                             android:layout_marginEnd="12dp"
                             android:contentDescription="Health Connect icon" />
 
