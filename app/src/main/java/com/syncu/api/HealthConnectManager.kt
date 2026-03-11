@@ -34,12 +34,10 @@ class HealthConnectManager(private val context: Context) {
         // Background permission string
         const val PERMISSION_BACKGROUND_READ = "android.permission.health.READ_HEALTH_DATA_IN_BACKGROUND"
 
-        // Base permissions (18 permissions)
+        // Base permissions (16 permissions - removed Distance and Total Calories)
         val PERMISSIONS = setOf(
             HealthPermission.getReadPermission(StepsRecord::class),
-            HealthPermission.getReadPermission(DistanceRecord::class),
             HealthPermission.getReadPermission(ActiveCaloriesBurnedRecord::class),
-            HealthPermission.getReadPermission(TotalCaloriesBurnedRecord::class),
             HealthPermission.getReadPermission(HeartRateRecord::class),
             HealthPermission.getReadPermission(SleepSessionRecord::class),
             HealthPermission.getReadPermission(HeartRateVariabilityRmssdRecord::class),
@@ -247,21 +245,6 @@ class HealthConnectManager(private val context: Context) {
             )
             response[StepsRecord.COUNT_TOTAL]?.toInt() ?: 0
         } catch (e: Exception) { 0 }
-    }
-
-    suspend fun getDistanceForDate(date: LocalDate): Double {
-        if (!hasReadPermission(DistanceRecord::class)) return 0.0
-        return try {
-            val startInstant = date.atStartOfDay(ZoneId.systemDefault()).toInstant()
-            val endInstant = date.plusDays(1).atStartOfDay(ZoneId.systemDefault()).toInstant()
-            val response = healthConnectClient.aggregate(
-                AggregateRequest(
-                    metrics = setOf(DistanceRecord.DISTANCE_TOTAL),
-                    timeRangeFilter = TimeRangeFilter.between(startInstant, endInstant)
-                )
-            )
-            response[DistanceRecord.DISTANCE_TOTAL]?.inMeters ?: 0.0
-        } catch (e: Exception) { 0.0 }
     }
 
     suspend fun getActiveCaloriesForDate(date: LocalDate): Double {
