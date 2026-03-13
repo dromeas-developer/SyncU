@@ -69,7 +69,7 @@ class SetupActivity : AppCompatActivity() {
     private var initialApiKey: String? = ""
     private var initialAthleteId: String? = ""
     private var initialAutoSync: Boolean = true
-    private var initialCustomRestingHR: Boolean = true
+    private var initialCustomRestingHR: Boolean = false
     private var initialRetentionDays: Int = 14
     private var initialSyncTime1: String = "08:00"
     private var initialSyncTime2: String = "01:00"

@@ -2,6 +2,7 @@ package com.syncu.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 
 /**
  * Preferences Manager
@@ -31,42 +32,42 @@ class PreferencesManager(context: Context) {
     var autoSyncEnabled: Boolean
         get() = sharedPreferences.getBoolean(KEY_AUTO_SYNC_ENABLED, false)
         set(value) {
-            sharedPreferences.edit().putBoolean(KEY_AUTO_SYNC_ENABLED, value).apply()
+            sharedPreferences.edit { putBoolean(KEY_AUTO_SYNC_ENABLED, value) }
         }
 
     var cacheRetentionDays: Int
         get() = sharedPreferences.getInt(KEY_CACHE_RETENTION_DAYS, DEFAULT_CACHE_RETENTION_DAYS)
         set(value) {
-            sharedPreferences.edit().putInt(KEY_CACHE_RETENTION_DAYS, value).apply()
+            sharedPreferences.edit { putInt(KEY_CACHE_RETENTION_DAYS, value) }
         }
 
     var useCustomRestingHR: Boolean
-        get() = sharedPreferences.getBoolean(KEY_USE_CUSTOM_RESTING_HR, true)
+        get() = sharedPreferences.getBoolean(KEY_USE_CUSTOM_RESTING_HR, false)
         set(value) {
-            sharedPreferences.edit().putBoolean(KEY_USE_CUSTOM_RESTING_HR, value).apply()
+            sharedPreferences.edit { putBoolean(KEY_USE_CUSTOM_RESTING_HR, value) }
         }
 
     var syncTime1: String
         get() = sharedPreferences.getString(KEY_SYNC_TIME_1, DEFAULT_SYNC_TIME_1) ?: DEFAULT_SYNC_TIME_1
         set(value) {
-            sharedPreferences.edit().putString(KEY_SYNC_TIME_1, value).apply()
+            sharedPreferences.edit { putString(KEY_SYNC_TIME_1, value) }
         }
 
     var syncTime2: String
         get() = sharedPreferences.getString(KEY_SYNC_TIME_2, DEFAULT_SYNC_TIME_2) ?: DEFAULT_SYNC_TIME_2
         set(value) {
-            sharedPreferences.edit().putString(KEY_SYNC_TIME_2, value).apply()
+            sharedPreferences.edit { putString(KEY_SYNC_TIME_2, value) }
         }
 
     var syncTime2Enabled: Boolean
         get() = sharedPreferences.getBoolean(KEY_SYNC_TIME_2_ENABLED, true)
         set(value) {
-            sharedPreferences.edit().putBoolean(KEY_SYNC_TIME_2_ENABLED, value).apply()
+            sharedPreferences.edit { putBoolean(KEY_SYNC_TIME_2_ENABLED, value) }
         }
 
     var lastSyncTimestamp: Long
         get() = sharedPreferences.getLong(KEY_LAST_SYNC_TIMESTAMP, 0L)
         set(value) {
-            sharedPreferences.edit().putLong(KEY_LAST_SYNC_TIMESTAMP, value).apply()
+            sharedPreferences.edit { putLong(KEY_LAST_SYNC_TIMESTAMP, value) }
         }
 }
